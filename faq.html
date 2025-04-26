@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - BookSwap</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>BookSwap</h1>
+                <p>Your Second-Hand Book Marketplace</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse</a></li>
+                    <li><a href="sell.html">Sell Books</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="btn login-btn" id="loginBtn">Login</a>
+                <a href="register.html" class="btn register-btn">Register</a>
+                <div class="user-profile" id="userProfile" style="display: none;">
+                    <span id="username">User</span>
+                    <img src="/api/placeholder/32/32" alt="Profile" class="profile-img">
+                    <div class="dropdown-content">
+                        <a href="profile.html">My Profile</a>
+                        <a href="my-books.html">My Books</a>
+                        <a href="messages.html">Messages</a>
+                        <a href="#" id="logoutBtn">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about BookSwap</p>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-search">
+                <input type="text" id="faqSearch" placeholder="Search FAQs...">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="faq-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="account">Account</button>
+                <button class="category-btn" data-category="buying">Buying</button>
+                <button class="category-btn" data-category="selling">Selling</button>
+                <button class="category-btn" data-category="shipping">Shipping</button>
+                <button class="category-btn" data-category="payments">Payments</button>
+            </div>
+            
+            <div class="faq-list">
+                <!-- Account FAQs -->
+                <div class="faq-item" data-category="account">
+                    <div class="faq-question">
+                        <h3>How do I create an account?</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Creating an account on BookSwap is easy! Simply click on the "Register" button in the top right corner of the page. You'll need to provide your email address, create a password, and fill in some basic information. You can also register using your Google or Facebook account for a quicker signup process.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="account">
+                    <div class="faq-question">
+                        <h3>How do I reset my password?</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If you've forgotten your password, click on the "Login" button, then select "Forgot Password?" link. Enter the email address associated with your account, and we'll send you instructions to reset your password. For security reasons, the reset link will expire after 24 hours.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="account">
+                    <div class="faq-question">
+                        <h3>Can I change my username or email address?</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can update your account information at any time. Simply go to "My Profile" after logging in, then select "Edit Profile." Here you can update your username, email address, and other account details. Note that email changes require verification through a confirmation link sent to your new email address.</p>
+                    </div>
+                </div>
+                
+                <!-- Buying FAQs -->
+                <div class="faq-item" data-category="buying">
+                    <div class="faq-question">
+                        <h3>How do I find books I'm interested in?</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>BookSwap offers multiple ways to discover books. You can use the search bar to look for specific titles, authors, or ISBN numbers. Browse by categories such as Fiction, Non-Fiction, or Mystery. You can also filter results by price range, condition, and location to find exactly what you're looking for.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="buying">
+                    <div class="faq-question">
+                        <h3>How do I contact a seller?</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>When viewing a book listing, you'll find a "Contact Seller" button. Click this to open our messaging system where you can ask questions about the book or arrange the exchange. All communication is kept within the BookSwap platform for your safety and to maintain a record of your conversation.</p>
+                    </div>
+                </div>
+                
+                <!-- Selling FAQs -->
+                <div class="faq-item" data-category="selling">
+                    <div class="faq-question">
+                        <h3>How do I list a book for sale?</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To sell a book, click on "Sell Books" in the navigation menu. You'll need to provide details such as the book's title, author, ISBN (if available), condition, price, and at least one photo. You can also add a description with additional information about the book. Once submitted, your listing will be reviewed and published on the marketplace.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="selling">
+                    <div class="faq-question">
+                        <h3>How much should I charge for my books?</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>When setting your price, consider the book's condition, age, and whether it's a rare edition. As a general guideline, most second-hand books sell for 30-60% of their original retail price. Our system will suggest a price range based on similar listings, but you have full control over the final price. Books priced competitively tend to sell faster.</p>
+                    </div>
+                </div>
+                
+                <!-- Shipping FAQs -->
+                <div class="faq-item" data-category="shipping">
+                    <div class="faq-question">
+                        <h3>How does shipping work on BookSwap?</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>BookSwap offers two exchange options: shipping and local meetup. If you choose shipping, you can specify your shipping policy in your listing. As a seller, you're responsible for safely packaging and shipping the book to the buyer's address. We recommend using tracked shipping methods for protection. See our <a href="shipping.html">Shipping Information</a> page for detailed guidelines.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="shipping">
+                    <div class="faq-question">
+                        <h3>How should I package my books for shipping?</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Books should be carefully packaged to prevent damage during transit. Wrap books in bubble wrap or paper, place them in a padded envelope or box, and ensure there's no movement inside the package. For valuable books, consider double-boxing for extra protection. Always include a packing slip with the order details.</p>
+                    </div>
+                </div>
+                
+                <!-- Payments FAQs -->
+                <div class="faq-item" data-category="payments">
+                    <div class="faq-question">
+                        <h3>What payment methods are accepted?</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>BookSwap supports various payment methods including credit/debit cards, PayPal, and bank transfers. For local exchanges, cash payments are also an option. All online payments are processed securely through our platform to protect both buyers and sellers.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="payments">
+                    <div class="faq-question">
+                        <h3>Does BookSwap charge any fees?</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>BookSwap charges a small commission of 5% on each successful sale. This fee helps us maintain the platform and provide customer support. There are no fees for listing books, and buyers don't pay any additional fees beyond the book price and shipping costs.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="payments">
+                    <div class="faq-question">
+                        <h3>When do I receive payment for my sold books?</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Payment is released to sellers once the buyer confirms receipt of the book and marks the transaction as complete. This typically happens within 3 days of delivery. If the buyer doesn't confirm receipt, the payment is automatically released after 14 days. Funds can be withdrawn to your bank account or used for future purchases on BookSwap.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-support">
+                <h3>Still have questions?</h3>
+                <p>If you couldn't find the answer you were looking for, our support team is here to help.</p>
+                <a href="contact.html" class="btn btn-primary">Contact Support</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BookSwap</h3>
+                    <p>Your trusted platform for buying and selling second-hand books.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="browse.html">Browse Books</a></li>
+                        <li><a href="sell.html">Sell Books</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> support@bookswap.com</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BookSwap. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // FAQ functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle FAQ answers
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('.toggle-icon i');
+                    
+                    if (answer.style.maxHeight) {
+                        answer.style.maxHeight = null;
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    }
+                });
+            });
+            
+            // Category filtering
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    
+                    // Update active button
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter FAQ items
+                    const faqItems = document.querySelectorAll('.faq-item');
+                    faqItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('faqSearch');
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const faqItems = document.querySelectorAll('.faq-item');
+                
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question h3').textContent.toLowerCase();
+                    const answer = item.querySelector('.faq-answer p').textContent.toLowerCase();
+                    
+                    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

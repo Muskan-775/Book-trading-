@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - BookSwap</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>BookSwap</h1>
+                <p>Your Second-Hand Book Marketplace</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse</a></li>
+                    <li><a href="sell.html">Sell Books</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="btn login-btn" id="loginBtn">Login</a>
+                <a href="register.html" class="btn register-btn">Register</a>
+                <div class="user-profile" id="userProfile" style="display: none;">
+                    <span id="username">User</span>
+                    <img src="/api/placeholder/32/32" alt="Profile" class="profile-img">
+                    <div class="dropdown-content">
+                        <a href="profile.html">My Profile</a>
+                        <a href="my-books.html">My Books</a>
+                        <a href="messages.html">Messages</a>
+                        <a href="#" id="logoutBtn">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Help Center</h1>
+        </div>
+    </section>
+
+    <section class="help-search">
+        <div class="container">
+            <div class="search-container">
+                <h2>How can we help you today?</h2>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for help topics...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="help-categories">
+        <div class="container">
+            <h2>Popular Help Topics</h2>
+            <div class="category-grid">
+                <a href="#account" class="help-category">
+                    <i class="fas fa-user-circle"></i>
+                    <h3>Account & Profile</h3>
+                </a>
+                <a href="#buying" class="help-category">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Buying Books</h3>
+                </a>
+                <a href="#selling" class="help-category">
+                    <i class="fas fa-tag"></i>
+                    <h3>Selling Books</h3>
+                </a>
+                <a href="#payments" class="help-category">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Payments & Refunds</h3>
+                </a>
+                <a href="#shipping" class="help-category">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Shipping & Delivery</h3>
+                </a>
+                <a href="#returns" class="help-category">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>Returns & Cancellations</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="help-content">
+        <div class="container">
+            <div class="help-section" id="account">
+                <h2>Account & Profile</h2>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How do I create an account?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Creating an account is easy and free:</p>
+                            <ol>
+                                <li>Click on the "Register" button in the top right corner of any page</li>
+                                <li>Enter your email address, create a password, and choose a username</li>
+                                <li>Read and accept our Terms of Service and Privacy Policy</li>
+                                <li>Click "Create Account"</li>
+                                <li>Verify your email address by clicking the link in the confirmation email we send you</li>
+                            </ol>
+                            <p>Once your email is verified, you can start using BookSwap!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How do I reset my password?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>If you've forgotten your password:</p>
+                            <ol>
+                                <li>Click "Login" and then select "Forgot Password"</li>
+                                <li>Enter the email address associated with your account</li>
+                                <li>Check your email for a password reset link</li>
+                                <li>Click the link and create a new password</li>
+                            </ol>
+                            <p>The password reset link expires after 24 hours for security reasons.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How do I update my profile information?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>To update your profile:</p>
+                            <ol>
+                                <li>Log in to your account</li>
+                                <li>Click on your username or profile image in the top right corner</li>
+                                <li>Select "My Profile" from the dropdown menu</li>
+                                <li>Click the "Edit Profile" button</li>
+                                <li>Update your information and click "Save Changes"</li>
+                            </ol>
+                            <p>You can change your display name, profile picture, contact information, and notification preferences.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How do I delete my account?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>To delete your account:</p>
+                            <ol>
+                                <li>Log in to your account</li>
+                                <li>Go to your profile settings (click your username > My Profile > Edit Profile)</li>
+                                <li>Scroll to the bottom and click "Delete Account"</li>
+                                <li>Follow the confirmation steps</li>
+                            </ol>
+                            <p>Please note: Account deletion is permanent and will remove all your listings, purchase history, and messages. Any active transactions must be completed before deletion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="help-section" id="buying">
+                <h2>Buying Books</h2>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How do I search for books?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>You can search for books in several ways:</p>
+                            <ul>
+                                <li><strong>Search Bar:</strong> Use the search bar at the top of any page to search by title, author, or ISBN</li>
+                                <li><strong>Browse Categories:</strong> Explore books by category from the homepage or Browse page</li>
+                                <li><strong>Advanced Search:</strong> On the Browse page, use filters for condition, price range, location, etc.</li>
+                            </ul>
+                            <p>Search results can be sorted by price, distance, or recently added.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How do I purchase a book?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>To purchase a book:</p>
+                            <ol>
+                                <li>Find a book you want to buy and click on its listing</li>
+                                <li>Review the book details, condition, and seller information</li>
+                                <li>Click "Buy Now" or "Add to Cart"</li>
+                                <li>Follow the checkout process to complete your purchase</li>
+                                <li>You'll receive confirmation and can track your order in your account</li>
+                            </ol>
+                            <p>After purchase, you can communicate with the seller through our messaging system.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>What payment methods are accepted?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>BookSwap accepts the following payment methods:</p>
+                            <ul>
+                                <li>Credit/debit cards (Visa, MasterCard, American Express, Discover)</li>
+                                <li>PayPal</li>
+                                <li>Apple Pay</li>
+                                <li>Google Pay</li>
+                                <li>BookSwap Wallet (store credit)</li>
+                            </ul>
+                            <p>All payments are processed securely through our platform. We never recommend paying sellers directly outside of BookSwap.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How do I leave feedback for a seller?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>After completing a purchase:</p>
+                            <ol>
+                                <li>Go to your purchase history in your account</li>
+                                <li>Find the transaction and click "Leave Feedback"</li>
+                                <li>Rate your experience (1-5 stars) and leave a comment</li>
+                                <li>Submit your feedback</li>
+                            </ol>
+                            <p>Honest feedback helps other buyers and helps us maintain a quality marketplace.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="help-section" id="selling">
+                <h2>Selling Books</h2>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How do I list a book for sale?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>To list a book for sale:</p>
+                            <ol>
+                                <li>Click "Sell Books" in the main navigation</li>
+                                <li>Enter the ISBN of your book or search by title/author</li>
+                                <li>Select the correct edition from the results</li>
+                                <li>Fill in details about your book's condition, add photos, and set your price</li>
+                                <li>Choose your shipping options and locations you'll ship to</li>
+                                <li>Click "List Book" to publish your listing</li>
+                            </ol>
+                            <p>Your book will be visible to potential buyers immediately after listing.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How do I set the right price for my book?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>When pricing your book, consider these factors:</p>
+                            <ul>
+                                <li>The condition of your book (new, like new, good, acceptable)</li>
+                                <li>Current prices for the same book on BookSwap and other marketplaces</li>
+                                <li>The original retail price and how recent the book is</li>
+                                <li>Special features (signed copy, first edition, etc.)</li>
+                            </ul>
+                            <p>Our pricing tool will suggest a range based on recent sales when you create your listing.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>What are seller fees?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>BookSwap charges a simple fee structure:</p>
+                            <ul>
+                                <li>10% of the final sale price (excluding shipping)</li>
+                                <li>A small payment processing fee (2.9% + $0.30 per transaction)</li>
+                            </ul>
+                            <p>Example: If you sell a book for $20 with $5 shipping, the fees would be:</p>
+                            <ul>
+                                <li>10% of $20 = $2.00</li>
+                                <li>Payment processing = $0.88</li>
+                                <li>Total fees = $2.88</li>
+                                <li>You receive = $22.12 ($20 + $5 - $2.88)</li>
+                            </ul>
+                            <p>Fees are automatically deducted when the sale is completed.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How do I manage my listings?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>To manage your book listings:</p>
+                            <ol>
+                                <li>Log in to your account</li>
+                                <li>Click your username and select "My Books" from the dropdown</li>
+                                <li>From this dashboard, you can:</li>
+                                <ul>
+                                    <li>Edit listing details or photos</li>
+                                    <li>Adjust pricing</li>
+                                    <li>Mark items as sold (if sold outside BookSwap)</li>
+                                    <li>Temporarily deactivate listings</li>
+                                    <li>Delete listings</li>
+                                </ul>
+                            </ol>
+                            <p>You can also view your sales history and pending orders from this page.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="help-section" id="payments">
+                <h2>Payments & Refunds</h2>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How do I get paid for my sales?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>When you sell a book:</p>
+                            <ol>
+                                <li>The buyer's payment is held securely by BookSwap</li>
+                                <li>You'll be notified to ship the book</li>
+                                <li>Once the book is delivered or the buyer confirms receipt, the payment is released to your BookSwap balance</li>
+                                <li>You can withdraw your balance to your linked bank account or PayPal</li>
+                            </ol>
+                            <p>Payments are typically available for withdrawal within 24 hours after the sale is completed.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How do I withdraw my earnings?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>To withdraw your earnings:</p>
+                            <ol>
+                                <li>Go to your Account Dashboard</li>
+                                <li>Click on "Balance" or "Payments"</li>
+                                <li>Select "Withdraw Funds"</li>
+                                <li>Choose your withdrawal method (bank transfer or PayPal)</li>
+                                <li>Enter the amount you wish to withdraw</li>
+                                <li>Confirm the withdrawal</li>
+                            </ol>
+                            <p>Bank transfers typically take 2-3 business days, while PayPal transfers are usually instant.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How do refunds work?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>If you need a refund as a buyer:</p>
+                            <ol>
+                                <li>Contact the seller through our messaging system first</li>
+                                <li>If you can't resolve the issue directly, go to your purchase history</li>
+                                <li>Find the order and click "Request Refund"</li>
+                                <li>Select a reason and provide details</li>
+                                <li>Submit your request</li>
+                            </ol>
+                            <p>Sellers have 48 hours to respond. If they approve, the refund is processed immediately. If they decline or don't respond, our support team will review the case.</p>
+                            <p>Refund eligibility:</p>
+                            <ul>
+                                <li>Book not as described or significantly different from listing</li>
+                                <li>Book damaged during shipping</li>
+                                <li>Book never received</li>
+                                <li>Order canceled before shipping</li>
+                            </ul>
+                            <p>Refunds are typically processed back to your original payment method within 3-5 business days.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>Is there a BookSwap buyer protection policy?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Yes, all purchases made through BookSwap are covered by our Buyer Protection Policy:</p>
+                            <ul>
+                                <li>Your payment is held securely until you receive your book</li>
+                                <li>You can request a refund if the book doesn't arrive or isn't as described</li>
+                                <li>Our support team will help resolve disputes between buyers and sellers</li>
+                                <li>In clear cases where the seller is at fault, we guarantee a full refund</li>
+                            </ul>
+                            <p>To qualify for buyer protection, all communication and transactions must take place through the BookSwap platform.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="help-section" id="shipping">
+                <h2>Shipping & Delivery</h2>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>What shipping options are available?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Shipping options are set by individual sellers, but typically include:</p>
+                            <ul>
+                                <li>Standard shipping (3-7 business days)</li>
+                                <li>Expedited shipping (2-3 business days)</li>
+                                <li>International shipping (varies by destination)</li>
+                            </ul>
+                            <p>Shipping costs and estimated delivery times are displayed on each book listing before purchase.</p>
+                            <p>For more detailed information, please visit our <a href="shipping.html">Shipping Information</a> page.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How do I track my order?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>To track your order:</p>
+                            <ol>
+                                <li>Log in to your account</li>
+                                <li>Go to "Purchase History" in your account dashboard</li>
+                                <li>Find your order and click "Track Package"</li>
+                                <li>You'll be directed to the carrier's tracking page</li>
+                            </ol>
+                            <p>You'll also receive email notifications with tracking updates for your order.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>What if my book hasn't arrived?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>If your book hasn't arrived by the estimated delivery date:</p>
+                            <ol>
+                                <li>Check the tracking information to confirm the current status</li>
+                                <li>Contact the seller through our messaging system</li>
+                                <li>If the seller doesn't respond within 48 hours or the issue isn't resolved, contact BookSwap Support</li>
+                            </ol>
+                            <p>For domestic orders, wait at least 7 days past the estimated delivery date before reporting an item as missing. For international orders, wait at least 21 days.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="help-section" id="returns">
+                <h2>Returns & Cancellations</h2>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>What is the return policy?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Return policies on BookSwap vary by seller. Each book listing should indicate the seller's return policy. Generally:</p>
+                            <ul>
+                                <li>Returns are accepted if the book doesn't match the description or is damaged</li>
+                                <li>Returns must typically be initiated within 7 days of delivery</li>
+                                <li>The book must be returned in its original condition</li>
+                            </ul>
+                            <p>To request a return:</p>
+                            <ol>
+                                <li>Contact the seller through our messaging system</li>
+                                <li>If approved, you'll receive return instructions</li>
+                                <li>Ship the book back and upload tracking information</li>
+                                <li>Once the seller confirms receipt, your refund will be processed</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>How do I cancel an order?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>To cancel an order:</p>
+                            <ol>
+                                <li>Go to your Purchase History</li>
+                                <li>Find the order and click "Cancel Order"</li>
+                                <li>Select a reason for cancellation</li>
+                                <li>Submit your request</li>
+                            </ol>
+                            <p>Orders can only be canceled if the seller hasn't shipped the book yet. If the book has been shipped, you'll need to follow the return process instead.</p>
+                            <p>Sellers have 24 hours to approve or decline the cancellation request. If approved, your payment will be refunded in full.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-support">
+        <div class="container">
+            <h2>Still Need Help?</h2>
+            <p>Our support team is here to assist you. Contact us through any of these channels:</p>
+            <div class="support-options">
+                <div class="support-option">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Support</h3>
+                    <p>support@bookswap.com</p>
+                    <p>Response within 24 hours</p>
+                </div>
+                <div class="support-option">
+                    <i class="fas fa-comments"></i>
+                    <h3>Live Chat</h3>
+                    <p>Available 9 AM - 8 PM EST</p>
+                    <a href="#" class="btn btn-primary">Start Chat</a>
+                </div>
+                <div class="support-option">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone Support</h3>
+                    <p>(123) 456-7890</p>
+                    <p>Monday-Friday: 9 AM - 6 PM EST</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BookSwap</h3>
+                    <p>Your trusted platform for buying and selling second-hand books.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="browse.html">Browse Books</a></li>
+                        <li><a href="sell.html">Sell Books</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="help.html" class="active">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> support@bookswap.com</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BookSwap. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+<script>
+         // Script to handle accordion functionality and search
+    document.addEventListener('DOMContentLoaded', function() {
+        // Accordion functionality (existing code)
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+				const content = this.nextElementSibling;
+				const icon = this.querySelector('i');
+            
+                // Toggle active class
+                this.classList.toggle('active');
+            
+                // Toggle content visibility
+                if (content.style.maxHeight) {
+					content.style.maxHeight = null;
+					icon.classList.remove('fa-minus');
+					icon.classList.add('fa-plus');
+				} else {
+					content.style.maxHeight = content.scrollHeight + "px";
+					icon.classList.remove('fa-plus');
+					icon.classList.add('fa-minus');
+				}
+			});
+	    });
+    
+		// Search functionality (new code)
+		const searchInput = document.querySelector('.search-bar input');
+		const searchButton = document.querySelector('.search-bar button');
+		const helpSections = document.querySelectorAll('.help-section');
+		const accordionItems = document.querySelectorAll('.accordion-item');
+    
+		// Function to perform search
+		function performSearch() {
+			const searchTerm = searchInput.value.toLowerCase().trim();
+        
+			if (!searchTerm) {
+            // If search is empty, show all sections and reset
+				helpSections.forEach(section => {
+					section.style.display = 'block';
+				});
+            
+				accordionItems.forEach(item => {
+					item.style.display = 'block';
+					const content = item.querySelector('.accordion-content');
+					const header = item.querySelector('.accordion-header');
+					const icon = header.querySelector('i');
+                
+					content.style.maxHeight = null;
+					header.classList.remove('active');
+					icon.classList.remove('fa-minus');
+					icon.classList.add('fa-plus');
+				});
+            
+				return;
+			}
+        
+			// Show only sections with matching content
+			let hasResults = false;
+        
+			helpSections.forEach(section => {
+				const sectionTitle = section.querySelector('h2').innerText.toLowerCase();
+				const sectionItems = section.querySelectorAll('.accordion-item');
+				let sectionHasMatch = sectionTitle.includes(searchTerm);
+				let visibleItemsInSection = 0;
+            
+				sectionItems.forEach(item => {
+					const header = item.querySelector('.accordion-header h3').innerText.toLowerCase();
+					const content = item.querySelector('.accordion-content').innerText.toLowerCase();
+                
+					if (header.includes(searchTerm) || content.includes(searchTerm)) {
+						item.style.display = 'block';
+                    
+                    // Expand this item to show the matching content
+						const accordionContent = item.querySelector('.accordion-content');
+						const accordionHeader = item.querySelector('.accordion-header');
+						const icon = accordionHeader.querySelector('i');
+                    
+						accordionHeader.classList.add('active');
+						accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+						icon.classList.remove('fa-plus');
+						icon.classList.add('fa-minus');
+                    
+						visibleItemsInSection++;
+						hasResults = true;
+					} else {
+						item.style.display = 'none';
+					}
+				});
+            
+				// If section title matches or any items inside match, show the section
+				if (sectionHasMatch || visibleItemsInSection > 0) {
+					section.style.display = 'block';
+				} else {
+					section.style.display = 'none';
+				}
+			});
+        
+			// Show a message if no results found
+			const existingNoResults = document.querySelector('.no-results-message');
+			if (!hasResults) {
+				if (!existingNoResults) {
+					const noResultsMsg = document.createElement('div');
+					noResultsMsg.className = 'no-results-message';
+					noResultsMsg.innerHTML = `
+                    <div class="container">
+                        <p>No results found for "${searchTerm}". Please try different keywords.</p>
+                    </div>
+					`;
+					const helpContent = document.querySelector('.help-content');
+					helpContent.parentNode.insertBefore(noResultsMsg, helpContent);
+				}
+			} else if (existingNoResults) {
+				existingNoResults.remove();
+			}
+		}
+    
+		// Add event listeners for search
+		searchButton.addEventListener('click', function(e) {
+			e.preventDefault();
+			performSearch();
+		});
+    
+		searchInput.addEventListener('keypress', function(e) {
+			if (e.key === 'Enter') {
+				e.preventDefault();
+				performSearch();
+			}
+		});
+	});
+</script>
+</body>
+</html>

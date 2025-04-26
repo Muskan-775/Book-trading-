@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Information - BookSwap</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>BookSwap</h1>
+                <p>Your Second-Hand Book Marketplace</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse</a></li>
+                    <li><a href="sell.html">Sell Books</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="btn login-btn" id="loginBtn">Login</a>
+                <a href="register.html" class="btn register-btn">Register</a>
+                <div class="user-profile" id="userProfile" style="display: none;">
+                    <span id="username">User</span>
+                    <img src="/api/placeholder/32/32" alt="Profile" class="profile-img">
+                    <div class="dropdown-content">
+                        <a href="profile.html">My Profile</a>
+                        <a href="my-books.html">My Books</a>
+                        <a href="messages.html">Messages</a>
+                        <a href="#" id="logoutBtn">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Shipping Information</h1>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="shipping-content">
+                <h2>Shipping Guidelines for BookSwap Users</h2>
+                <p>Last Updated: April 20, 2025</p>
+                <p>At BookSwap, we aim to make the shipping process as smooth and hassle-free as possible. This guide covers everything you need to know about shipping books as a seller and what to expect as a buyer.</p>
+
+                <div class="shipping-section">
+                    <h3>For Sellers: How to Ship Books</h3>
+                    
+                    <h4>Packaging Guidelines</h4>
+                    <p>Proper packaging ensures your books arrive in the same condition as when you sent them:</p>
+                    <ul>
+                        <li>Wrap each book in bubble wrap or use padding material to protect corners and edges</li>
+                        <li>For paperbacks, add cardboard on both sides to prevent bending</li>
+                        <li>For hardcovers, ensure extra protection for dust jackets</li>
+                        <li>Use appropriate-sized packaging that doesn't leave excessive space</li>
+                        <li>Seal all openings with packing tape to prevent damage from moisture</li>
+                    </ul>
+
+                    <h4>Shipping Options</h4>
+                    <p>We recommend the following shipping options:</p>
+                    <ul>
+                        <li><strong>Media Mail (USPS)</strong> - The most economical option for books within the US</li>
+                        <li><strong>First Class Mail (USPS)</strong> - Good for single books under 13 oz</li>
+                        <li><strong>Priority Mail (USPS)</strong> - Faster option with tracking included</li>
+                        <li><strong>Flat Rate Envelopes/Boxes (USPS)</strong> - Convenient for multiple books</li>
+                        <li><strong>Major Carriers (UPS, FedEx)</strong> - Additional options for larger shipments</li>
+                    </ul>
+
+                    <h4>Tracking and Insurance</h4>
+                    <p>We strongly recommend using shipping methods that include tracking. For valuable books (over $50), consider adding insurance to your shipment. Always share the tracking number with your buyer through our messaging system.</p>
+
+                    <h4>International Shipping</h4>
+                    <p>If you ship internationally:</p>
+                    <ul>
+                        <li>Be aware of additional customs forms required</li>
+                        <li>Allow for longer delivery times (2-4 weeks is common)</li>
+                        <li>Consider using USPS Priority Mail International or similar services</li>
+                        <li>Be transparent with buyers about potential customs fees they may incur</li>
+                    </ul>
+
+                    <h4>Shipping Timeframes</h4>
+                    <p>As a seller, you are expected to:</p>
+                    <ul>
+                        <li>Ship books within 3 business days of receiving payment</li>
+                        <li>Mark items as shipped in your BookSwap account</li>
+                        <li>Provide tracking information when available</li>
+                    </ul>
+                </div>
+
+                <div class="shipping-section">
+                    <h3>For Buyers: What to Expect</h3>
+                    
+                    <h4>Shipping Costs</h4>
+                    <p>Shipping costs are set by individual sellers and should be clearly indicated in book listings. Factors that affect shipping cost include:</p>
+                    <ul>
+                        <li>Weight and dimensions of the book(s)</li>
+                        <li>Shipping method selected</li>
+                        <li>Distance between you and the seller</li>
+                        <li>Whether expedited shipping is requested</li>
+                    </ul>
+
+                    <h4>Delivery Timeline</h4>
+                    <p>Typical delivery timeframes:</p>
+                    <ul>
+                        <li><strong>Domestic Standard Shipping:</strong> 3-7 business days after shipping</li>
+                        <li><strong>Domestic Expedited Shipping:</strong> 2-3 business days after shipping</li>
+                        <li><strong>International Standard Shipping:</strong> 1-4 weeks after shipping</li>
+                        <li><strong>International Expedited Shipping:</strong> 3-10 business days after shipping</li>
+                    </ul>
+                    <p>Please note that these are estimates and actual delivery times may vary based on location and other factors.</p>
+
+                    <h4>Tracking Your Order</h4>
+                    <p>Most sellers provide tracking information which will be available in your purchase history. You'll also receive notifications when your book has been shipped.</p>
+
+                    <h4>Customs and International Purchases</h4>
+                    <p>If you're purchasing from another country:</p>
+                    <ul>
+                        <li>You may be responsible for paying customs fees, import taxes, or VAT</li>
+                        <li>These fees are not included in the book price or shipping costs</li>
+                        <li>Delivery may be delayed for customs inspection</li>
+                    </ul>
+                </div>
+
+                <div class="shipping-section">
+                    <h3>Shipping Problems</h3>
+                    
+                    <h4>Lost or Damaged Items</h4>
+                    <p>If your book arrives damaged or doesn't arrive at all:</p>
+                    <ul>
+                        <li>Contact the seller first through our messaging system</li>
+                        <li>Allow 48 hours for a response</li>
+                        <li>If no resolution is reached, open a case with BookSwap Support</li>
+                        <li>Include photos of damaged items when applicable</li>
+                    </ul>
+
+                    <h4>Return Shipping</h4>
+                    <p>If a return is approved:</p>
+                    <ul>
+                        <li>The party responsible for the return shipping cost will be determined based on the situation</li>
+                        <li>Use similar packaging materials to prevent further damage</li>
+                        <li>Always use a tracked shipping method for returns</li>
+                        <li>Mark the package as "Return" and include the original order number</li>
+                    </ul>
+                </div>
+
+                <div class="shipping-section">
+                    <h3>Eco-Friendly Shipping</h3>
+                    <p>At BookSwap, we encourage environmentally responsible shipping practices:</p>
+                    <ul>
+                        <li>Reuse packaging materials when possible</li>
+                        <li>Consider biodegradable or recyclable packaging materials</li>
+                        <li>Combine multiple books in one shipment when possible</li>
+                        <li>Choose carbon-neutral shipping options when available</li>
+                    </ul>
+                </div>
+
+                <div class="shipping-section">
+                    <h3>Additional Resources</h3>
+                    <ul>
+                        <li><a href="#">Carrier Comparison Chart</a></li>
+                        <li><a href="#">Printable Packing Checklist</a></li>
+                        <li><a href="#">International Shipping Guide</a></li>
+                        <li><a href="#">Video: How to Pack Books Safely</a></li>
+                    </ul>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Questions About Shipping?</h3>
+                    <p>If you have any questions not covered in this guide, please contact our support team:</p>
+                    <p>shipping@bookswap.com<br>
+                    (123) 456-7890</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BookSwap</h3>
+                    <p>Your trusted platform for buying and selling second-hand books.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="shipping.html" class="active">Shipping Info</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> support@bookswap.com</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BookSwap. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

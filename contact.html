@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSwap - Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-book"></i> BookSwap</h1>
+            </div>
+            <nav>
+                <ul>
+				    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li class="user-actions">
+                        <a href="register.html">Register</a>
+                        <a href="login.html" class="btn">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>Send us an email at:</p>
+                    <a href="mailto:support@bookswap.com">support@bookswap.com</a>
+                    <p class="response-time">We typically respond within 24 hours</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Give us a call at:</p>
+                    <a href="tel:1-800-BOOKSWAP">1-800-BOOKSWAP</a>
+                    <p class="response-time">Mon-Fri: 9am-5pm EST</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Live Chat</h3>
+                    <p>Chat with our support team:</p>
+                    <button class="btn start-chat">Start Live Chat</button>
+                    <p class="response-time">Available during business hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-form-wrapper">
+                    <h2>Send Us a Message</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a Subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Customer Support</option>
+                                <option value="account">Account Issues</option>
+                                <option value="billing">Billing Questions</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="bug">Report a Bug</option>
+                                <option value="partnership">Business Partnership</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to our newsletter for book recommendations and deals</label>
+                        </div>
+                        <button type="submit" class="btn btn-large">Send Message</button>
+                    </form>
+                </div>
+                <div class="faq-sidebar">
+                    <div class="faq-container">
+                        <h3>Frequently Asked Questions</h3>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How do I list a book for sale?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Log into your account, go to your dashboard, and click "Add a New Book". Fill in the details about your book, upload photos, and set your price.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What payment methods do you accept?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We accept credit/debit cards, PayPal, and in some locations, direct bank transfers.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How does shipping work?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sellers are responsible for shipping books to buyers. We recommend using tracked shipping methods. You can arrange local pickup if both parties agree.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What happens if a book arrives damaged?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Contact our support team immediately with photos of the damaged book. We'll help resolve the issue between you and the seller.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Can I return a book?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Returns are handled between buyers and sellers. If the book doesn't match the description, contact the seller and our support team if needed.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="view-all-faq">View All FAQs <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location">
+        <div class="container">
+            <h2>Visit Our Office</h2>
+            <div class="location-container">
+                <div class="map-container">
+                    <img src="/api/placeholder/600/300" alt="Map" class="office-map">
+                </div>
+                <div class="office-info">
+                    <h3>BookSwap Headquarters</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Book Lane</p>
+                        <p>Suite 301</p>
+                        <p>Portland, OR 97201</p>
+                    </address>
+                    <p><i class="fas fa-clock"></i> Office Hours: Monday - Friday, 9am - 5pm</p>
+                    <p>We love visitors! Please schedule an appointment before stopping by.</p>
+                    <button class="btn">Schedule a Visit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="connect-social">
+        <div class="container">
+            <h2>Connect With Us</h2>
+            <p>Follow us on social media for book recommendations, community stories, and special offers.</p>
+            <div class="social-links-large">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i> YouTube</a>
+                <a href="#" class="social-link"><i class="fab fa-pinterest-p"></i> Pinterest</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2><i class="fas fa-book"></i> BookSwap</h2>
+                    <p>Your marketplace for pre-loved books</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="browse.html">Browse Books</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="register.html">Register</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Help</h3>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Connect With Us</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 BookSwap. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Books - BookSwap</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>BookSwap</h1>
+                <p>Your Second-Hand Book Marketplace</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse</a></li>
+                    <li><a href="sell.html" class="active">Sell Books</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="btn login-btn" id="loginBtn">Login</a>
+                <a href="register.html" class="btn register-btn">Register</a>
+                <div class="user-profile" id="userProfile" style="display: none;">
+                    <span id="username">User</span>
+                    <img src="/api/placeholder/32/32" alt="Profile" class="profile-img">
+                    <div class="dropdown-content">
+                        <a href="profile.html">My Profile</a>
+                        <a href="my-books.html">My Books</a>
+                        <a href="messages.html">Messages</a>
+                        <a href="#" id="logoutBtn">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Sell Your Books</h1>
+            <p>List your second-hand books on BookSwap and find them a new home</p>
+        </div>
+    </section>
+
+    <section class="sell-books-section">
+        <div class="container">
+            <div class="auth-check" id="authCheck">
+                <div class="auth-warning">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <div>
+                        <h3>Please Login First</h3>
+                        <p>You need to be logged in to list books for sale.</p>
+                        <div class="auth-buttons">
+                            <a href="login.html" class="btn btn-primary">Login</a>
+                            <a href="register.html" class="btn btn-secondary">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sell-form-container" id="sellFormContainer" style="display: none;">
+                <div class="sell-steps">
+                    <div class="step active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span class="step-text">Book Details</span>
+                    </div>
+                    <div class="step" data-step="2">
+                        <span class="step-number">2</span>
+                        <span class="step-text">Condition & Price</span>
+                    </div>
+                    <div class="step" data-step="3">
+                        <span class="step-number">3</span>
+                        <span class="step-text">Photos</span>
+                    </div>
+                    <div class="step" data-step="4">
+                        <span class="step-number">4</span>
+                        <span class="step-text">Review & Publish</span>
+                    </div>
+                </div>
+
+                <form id="sellBookForm">
+                    <!-- Step 1: Book Details -->
+                    <div class="form-step active" id="step1">
+                        <h2>Book Details</h2>
+                        <p>Enter the details of your book below</p>
+
+                        <div class="isbn-search">
+                            <div class="form-group">
+                                <label for="isbn">ISBN (Optional)</label>
+                                <div class="input-with-button">
+                                    <input type="text" id="isbn" placeholder="Enter ISBN to auto-fill details">
+                                    <button type="button" id="searchIsbn" class="btn">Search</button>
+                                </div>
+                                <small>Enter ISBN to automatically fill book details</small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="title">Book Title *</label>
+                            <input type="text" id="title" placeholder="Enter book title" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="author">Author(s) *</label>
+                            <input type="text" id="author" placeholder="Enter author name(s)" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="publisher">Publisher</label>
+                                <input type="text" id="publisher" placeholder="Enter publisher">
+                            </div>
+                            <div class="form-group">
+                                <label for="pubYear">Publication Year</label>
+                                <input type="number" id="pubYear" placeholder="YYYY">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Category *</label>
+                            <select id="category" required>
+                                <option value="">Select a category</option>
+                                <option value="fiction">Fiction</option>
+                                <option value="nonfiction">Non-Fiction</option>
+                                <option value="mystery">Mystery & Thriller</option>
+                                <option value="scifi">Science Fiction & Fantasy</option>
+                                <option value="romance">Romance</option>
+                                <option value="biography">Biography & Autobiography</option>
+                                <option value="history">History</option>
+                                <option value="children">Children's Books</option>
+                                <option value="youngadult">Young Adult</option>
+                                <option value="academic">Academic & Textbooks</option>
+                                <option value="cooking">Cooking & Food</option>
+                                <option value="art">Art & Photography</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="language">Language *</label>
+                            <select id="language" required>
+                                <option value="">Select a language</option>
+                                <option value="english">English</option>
+                                <option value="spanish">Spanish</option>
+                                <option value="french">French</option>
+                                <option value="german">German</option>
+                                <option value="chinese">Chinese</option>
+                                <option value="japanese">Japanese</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Book Description *</label>
+                            <textarea id="description" rows="5" placeholder="Add a description of the book" required></textarea>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-primary next-step">Continue to Condition & Price</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Condition & Price -->
+                    <div class="form-step" id="step2">
+                        <h2>Condition & Price</h2>
+                        <p>Tell us about the condition of your book and set your price</p>
+
+                        <div class="form-group">
+                            <label>Book Condition *</label>
+                            <div class="condition-options">
+                                <div class="condition-option">
+                                    <input type="radio" name="condition" id="likeNew" value="like-new" required>
+                                    <label for="likeNew">
+                                        <span class="condition-name">Like New</span>
+                                        <span class="condition-desc">No signs of wear, all pages intact</span>
+                                    </label>
+                                </div>
+                                <div class="condition-option">
+                                    <input type="radio" name="condition" id="veryGood" value="very-good">
+                                    <label for="veryGood">
+                                        <span class="condition-name">Very Good</span>
+                                        <span class="condition-desc">Minimal wear, no writing/highlighting</span>
+                                    </label>
+                                </div>
+                                <div class="condition-option">
+                                    <input type="radio" name="condition" id="good" value="good">
+                                    <label for="good">
+                                        <span class="condition-name">Good</span>
+                                        <span class="condition-desc">Some wear, possibly minor notes</span>
+                                    </label>
+                                </div>
+                                <div class="condition-option">
+                                    <input type="radio" name="condition" id="acceptable" value="acceptable">
+                                    <label for="acceptable">
+                                        <span class="condition-name">Acceptable</span>
+                                        <span class="condition-desc">Worn but intact, may have markings</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="conditionNotes">Additional Condition Notes</label>
+                            <textarea id="conditionNotes" rows="3" placeholder="Add any specific details about the condition"></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="price">Price ($) *</label>
+                                <input type="number" id="price" placeholder="0.00" step="0.01" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="originalPrice">Original Price ($)</label>
+                                <input type="number" id="originalPrice" placeholder="0.00" step="0.01" min="0">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="negotiable">
+                                <label for="negotiable">Price is negotiable</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Shipping Options *</label>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="localPickup" name="shipping" value="local-pickup" required>
+                                <label for="localPickup">Local Pickup</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="standardShipping" name="shipping" value="standard-shipping">
+                                <label for="standardShipping">Standard Shipping</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="internationalShipping" name="shipping" value="international-shipping">
+                                <label for="internationalShipping">International Shipping</label>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary prev-step">Back</button>
+                            <button type="button" class="btn btn-primary next-step">Continue to Photos</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Photos -->
+                    <div class="form-step" id="step3">
+                        <h2>Add Photos</h2>
+                        <p>Upload clear photos of your book to attract buyers</p>
+
+                        <div class="photo-upload-container">
+                            <div class="main-photo-upload">
+                                <div class="upload-placeholder" id="mainPhotoPlaceholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Upload Cover Photo</p>
+                                    <span>This will be the main photo for your listing</span>
+                                    <input type="file" id="mainPhoto" accept="image/*" required>
+                                    <button type="button" class="btn btn-outline">Select Photo</button>
+                                </div>
+                                <div class="uploaded-photo" id="mainPhotoPreview" style="display: none;">
+                                    <img src="" alt="Main Photo Preview">
+                                    <div class="photo-actions">
+                                        <button type="button" class="btn-icon delete-photo"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="additional-photos">
+                                <h3>Additional Photos</h3>
+                                <p>Add up to 5 more photos of your book</p>
+                                <div class="photo-grid">
+                                    <div class="upload-placeholder small-upload">
+                                        <i class="fas fa-plus"></i>
+                                        <input type="file" class="additional-photo" accept="image/*">
+                                    </div>
+                                    <div class="upload-placeholder small-upload">
+                                        <i class="fas fa-plus"></i>
+                                        <input type="file" class="additional-photo" accept="image/*">
+                                    </div>
+                                    <div class="upload-placeholder small-upload">
+                                        <i class="fas fa-plus"></i>
+                                        <input type="file" class="additional-photo" accept="image/*">
+                                    </div>
+                                    <div class="upload-placeholder small-upload">
+                                        <i class="fas fa-plus"></i>
+                                        <input type="file" class="additional-photo" accept="image/*">
+                                    </div>
+                                    <div class="upload-placeholder small-upload">
+                                        <i class="fas fa-plus"></i>
+                                        <input type="file" class="additional-photo" accept="image/*">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="photo-tips">
+                            <h3>Photo Tips</h3>
+                            <ul>
+                                <li>Take photos in good lighting</li>
+                                <li>Capture the front cover, back cover, and spine</li>
+                                <li>Show any damage or wear clearly</li>
+                                <li>Include photos of important pages or features</li>
+                            </ul>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary prev-step">Back</button>
+                            <button type="button" class="btn btn-primary next-step">Review & Publish</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Review & Publish -->
+                    <div class="form-step" id="step4">
+                        <h2>Review & Publish</h2>
+                        <p>Review your listing details before publishing</p>
+
+                        <div class="listing-preview">
+                            <div class="preview-header">
+                                <h3>Listing Preview</h3>
+                            </div>
+                            <div class="preview-content">
+                                <div class="preview-image">
+                                    <img id="previewMainPhoto" src="/api/placeholder/300/400" alt="Book Cover">
+                                </div>
+                                <div class="preview-details">
+                                    <h3 id="previewTitle">Book Title</h3>
+                                    <p class="preview-author" id="previewAuthor">Author Name</p>
+                                    <div class="preview-condition" id="previewCondition">
+                                        <span class="condition-badge">Like New</span>
+                                    </div>
+                                    <div class="preview-price">
+                                        <span class="current-price" id="previewPrice">$0.00</span>
+                                        <span class="original-price" id="previewOriginalPrice">$0.00</span>
+                                    </div>
+                                    <div class="preview-shipping" id="previewShipping">
+                                        <i class="fas fa-truck"></i> Shipping options will appear here
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="preview-description">
+                                <h4>Description</h4>
+                                <p id="previewDescription">Book description will appear here.</p>
+                            </div>
+                            <div class="preview-condition-notes">
+                                <h4>Condition Notes</h4>
+                                <p id="previewConditionNotes">Condition notes will appear here.</p>
+                            </div>
+                        </div>
+
+                        <div class="publish-options">
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="terms" required>
+                                    <label for="terms">I agree to the <a href="terms.html" target="_blank">Terms and Conditions</a></label>
+                                </div>
+                            </div>
+
+                            <div class="listing-visibility">
+                                <h4>Listing Visibility</h4>
+                                <div class="radio-group">
+                                    <input type="radio" id="public" name="visibility" value="public" checked>
+                                    <label for="public">Public - Visible to all BookSwap users</label>
+                                </div>
+                                <div class="radio-group">
+                                    <input type="radio" id="draft" name="visibility" value="draft">
+                                    <label for="draft">Save as Draft - Not visible until you publish</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary prev-step">Back</button>
+                            <button type="submit" class="btn btn-primary" id="publishBtn">Publish Listing</button>
+                            <button type="button" class="btn btn-outline" id="saveDraftBtn">Save as Draft</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="selling-tips">
+        <div class="container">
+            <h2>Tips for Selling Your Books</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Quality Photos</h3>
+                    <p>Take clear, well-lit photos from multiple angles to show the book's condition accurately.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Detailed Description</h3>
+                    <p>Be honest about condition and include relevant details like edition, special features, etc.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>Fair Pricing</h3>
+                    <p>Research similar books to set competitive prices that will attract buyers.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Be Responsive</h3>
+                    <p>Respond quickly to inquiries to increase your chances of making a sale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BookSwap</h3>
+                    <p>Your trusted platform for buying and selling second-hand books.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="browse.html">Browse Books</a></li>
+                        <li><a href="sell.html">Sell Books</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+					    <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> support@bookswap.com</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BookSwap. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="sell.js"></script>
+</body>
+</html>

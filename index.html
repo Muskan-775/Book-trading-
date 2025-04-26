@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSwap - Second Hand Book Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>BookSwap</h1>
+                <p>Your Second-Hand Book Marketplace</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="browse.html">Browse</a></li>
+                    <li><a href="sell.html">Sell Books</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="btn login-btn" id="loginBtn">Login</a>
+                <a href="register.html" class="btn register-btn">Register</a>
+                <div class="user-profile" id="userProfile" style="display: none;">
+                    <span id="username">User</span>
+                    <img src="/api/placeholder/32/32" alt="Profile" class="profile-img">
+                    <div class="dropdown-content">
+                        <a href="profile.html">My Profile</a>
+                        <a href="my-books.html">My Books</a>
+                        <a href="messages.html">Messages</a>
+                        <a href="#" id="logoutBtn">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Find Your Next Great Read</h2>
+                <p>Browse thousands of affordable second-hand books or sell your own!</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search by title, author, or ISBN...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="cta-buttons">
+                    <a href="browse.html" class="btn btn-primary">Browse Books</a>
+                    <a href="sell.html" class="btn btn-secondary">Sell Your Books</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-books">
+        <div class="container">
+            <h2>Featured Books</h2>
+            <div class="book-grid" id="featuredBooks">
+                <!-- Books will be loaded dynamically via JavaScript -->
+                <div class="book-loading">Loading featured books...</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <h2>Browse Categories</h2>
+            <div class="category-grid">
+                <a href="browse.html?category=fiction" class="category-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Fiction</h3>
+                </a>
+                <a href="browse.html?category=nonfiction" class="category-card">
+                    <i class="fas fa-landmark"></i>
+                    <h3>Non-Fiction</h3>
+                </a>
+                <a href="browse.html?category=mystery" class="category-card">
+                    <i class="fas fa-search"></i>
+                    <h3>Mystery</h3>
+                </a>
+                <a href="browse.html?category=scifi" class="category-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Sci-Fi</h3>
+                </a>
+                <a href="browse.html?category=romance" class="category-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Romance</h3>
+                </a>
+                <a href="browse.html?category=history" class="category-card">
+                    <i class="fas fa-history"></i>
+                    <h3>History</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Sign Up</h3>
+                    <p>Create a free account to start buying and selling books.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Browse Books</h3>
+                    <p>Find books you love at prices you'll love even more.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                    <h3>List Your Books</h3>
+                    <p>Easily list your books for sale in just a few steps.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Connect</h3>
+                    <p>Message buyers or sellers to arrange the exchange.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-slider" id="testimonialSlider">
+                <!-- Testimonials will be loaded dynamically -->
+                <div class="testimonial">
+                    <p>"I've found so many great books on BookSwap at amazing prices. The community is fantastic!"</p>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/50/50" alt="User">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <p>Book Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Updated</h2>
+            <p>Join our newsletter to receive updates on new books and special offers.</p>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BookSwap</h3>
+                    <p>Your trusted platform for buying and selling second-hand books.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="browse.html">Browse Books</a></li>
+                        <li><a href="sell.html">Sell Books</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> support@bookswap.com</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BookSwap. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
